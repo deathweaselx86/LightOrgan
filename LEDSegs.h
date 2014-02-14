@@ -1,7 +1,14 @@
-#ifndef _LEDSEGS_
-#define _LEDSEGS_ 26
+#ifndef _LEDSEGS_H
+#define _LEDSEGS_H
 
-#include <Adafruit_NeoPixel.h>
+#if ARDUINO >= 100
+ #include "Arduino.h"
+ #include "Print.h"
+#else
+ #include "WProgram.h"
+#endif
+
+#include "Adafruit_NeoPixel.h"
 
 //Total spectrum analyzer shield bands and max value for a band read. Do not change this.
 const short cSegNumBands=7;
@@ -173,7 +180,7 @@ class LEDSegs {
     void ShowSegments();
     
     //A pointer to the low-level I/O LBD8806 strip object we talk to
-    Adafruit_NeoPixel* objPxlStrip;
+    Adafruit_NeoPixel * objPxlStrip;
     short nLEDsInStrip;
     
     //Array of random cutoff levels (for cSegActionRandom)
@@ -231,4 +238,5 @@ const uint32_t RGBPurpleVeryDim =  LEDSegs::Color( 1,  0,  1);
 
 //General macros
 #define SIZEOF_ARRAY(ary) (sizeof(ary) / sizeof(ary[ 0 ]))
+
 #endif

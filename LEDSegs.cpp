@@ -1,4 +1,5 @@
 #include "LEDSegs.h"
+#include <Adafruit_NeoPixel.h>
 
 /*______________
 LEDSegsInit:Common constructor code

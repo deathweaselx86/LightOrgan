@@ -1,11 +1,11 @@
 //An exmaple of using LEDSegs to drive a Christmas display
 
-#include "LEDSegs.cpp"
+#include <LEDSegs.h>
 
 //Our LED strip instance pointer
 LEDSegs* strip;
 
-const short nTotalLEDs = 160; //Total number of LEDs in the strip (160 for a 5-meter 32/meter strip uncut)
+const short nTotalLEDs = 30; //Total number of LEDs in the strip (160 for a 5-meter 32/meter strip uncut)
 const short nFirstLED = 0; //First LED to turn on (0-origin)
 const short nLastLED = nTotalLEDs - 1; //Max LED index to illuminate. Must be < nTotalLEDs
 const unsigned long refreshDelayMS = 35UL; //Min time between strip update cycles (in milliseconds)
@@ -295,7 +295,7 @@ The Arduino boot setup routine
 void setup() {
 
   //Create the strip class instance we will use
-  strip = new LEDSegs(nTotalLEDs);
+  strip = new LEDSegs(nTotalLEDs, 6, NEO_GRB + NEO_KHZ800);
   
   //Make sure we see a "change" to start the segment sets cycling
   thisSegmentSet = -1;
