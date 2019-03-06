@@ -39,9 +39,8 @@ options can be defined for each segment to alter how that segment displays. You 
 static segments or backgrounds that are not level-dependent.
 
 
-===============
-LEDSegs object:
-===============
+===============LEDSegs object
+
 
 The LEDSegs library here is written as a C++ class. It exposes methods to make creating effects
 very easy. So first, include this library or its source in your code.
@@ -64,9 +63,7 @@ You can explicitly reset the LEDSegs object at any time with a ResetStrip() call
 
   strip->ResetStrip()
 
-=========
-Segments:
-=========
+=========Segments
 
 Well, feelin' pretty good are you? Now all you have to do is define your segments and you're
 ready to start jammin' to the tunes!
@@ -249,9 +246,8 @@ You can define options for the segment using the SetSegment_Options(bitmask) met
   An inverted level (ie 1023 - actuallevel) is used for the display. So higher levels reduce the number
   of LEDs, rather than increasing them.
 
-===========
-Displaying:
-===========
+===========Displaying
+
 
 Once you have the LEDSegs object created and its segments defined, just call:
 
